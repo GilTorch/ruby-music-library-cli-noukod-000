@@ -7,7 +7,7 @@ module Concerns
     end
 
     def find_or_create_by_name(name)
-      found = self.all.select{|class_instance| class_instance.name == name}[0]
+      found = find_by_name(name)
       if found.nil?
         self.create(name)
       else
