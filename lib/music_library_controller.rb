@@ -30,7 +30,7 @@ class MusicLibraryController
   def list_songs
     index = 0
     Song.all.each do |song|
-      puts index+". "+song.name
+      puts song.name
       index+=1
     end
   end
