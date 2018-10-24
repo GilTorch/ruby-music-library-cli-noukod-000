@@ -89,11 +89,11 @@ class MusicLibraryController
 
   def play_song
     number_chosen=0
-    # loop do
+    loop do
     puts "Which song number would you like to play?"
     number_chosen = gets.strip.to_i
-    #   break if !Song.all[number_chosen-1].nil?
-    # end
+      break if !Song.all[number_chosen-1].nil?
+    end
     if(!Song.all[number_chosen-1].nil?)
       sorted_songs=Song.all.sort{|prev_song,next_song| prev_song.name <=> next_song.name}
       song_chosen=sorted_songs[number_chosen-1]
