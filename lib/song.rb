@@ -88,7 +88,7 @@ class Song
     genre = Genre.find_or_create_by_name(genre_name)
     song = Song.new(song_name,artist,genre)
     # song = Song.new_from_filename(file_name)
-    self.save(song)
+    save(song)
   end
 
 end
