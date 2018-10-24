@@ -66,7 +66,7 @@ class MusicLibraryController
       sorted_songs = artist_found.songs.sort{|prev_song,next_song| prev_song.name <=> next_song.name }
 
       sorted_songs.each do |song|
-        puts "#{index+1}. #{song.name} - #{song.genre}"
+        puts "#{index+1}. #{song.name} - #{song.genre.name}"
         index+=1
       end
     end
