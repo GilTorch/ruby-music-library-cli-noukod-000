@@ -88,6 +88,7 @@ class MusicLibraryController
   end
 
   def play_song
+    number_chosen=0
     loop do
       puts "Which song number would you like to play?"
       number_chosen = gets.strip.to_i
