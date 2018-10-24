@@ -77,7 +77,7 @@ class Song
 
   end
 
-  def self.create_from_filename(filename)
+  def self.create_from_filename(file_name)
     song_infos=file_name.split(" - ")
       #binding.pry
     song_name=song_infos[1]
