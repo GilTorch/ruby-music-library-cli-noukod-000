@@ -58,7 +58,7 @@ class MusicLibraryController
 
   def list_songs_by_artist
     puts "Please enter the name of the artist:"
-    artist_name = gets.strip 
+    artist_name = gets.strip
     artist_found=Artist.find_by_name(artist_name)
     index=0
     artist_found.songs.each do |song|
