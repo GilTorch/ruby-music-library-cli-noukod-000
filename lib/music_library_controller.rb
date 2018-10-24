@@ -94,7 +94,7 @@ class MusicLibraryController
       break if !Song.all[number_chosen-1].nil?
     end
     song_chosen=Song.all[number_chosen-1]
-    
+    puts "Playing #{song_chosen.name} by #{song.artist.name}"
   end
 
 end
