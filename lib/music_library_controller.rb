@@ -18,9 +18,12 @@ class MusicLibraryController
     puts "To play a song, enter 'play song'."
     puts "To quit, type 'exit'."
     puts "What would you like to do?"
-    gets.strip
-    gets.strip
-    gets.strip
-    gets.strip
+    loop do 
+      input = gets.strip
+      break if input == 'exit'
+    end
+    # gets.strip
+    # gets.strip
+    # gets.strip
   end
 end
