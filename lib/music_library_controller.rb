@@ -82,7 +82,7 @@ class MusicLibraryController
        sorted_genres = genre_found.songs.sort{|prev_genre,next_genre| prev_genre.name <=> next_genre.name }
 
        sorted_genres.each do |song|
-         puts "#{index+1}. #{song.name} - #{song.genre.name}"
+         puts "#{index+1}. #{song.artist.name} - #{song.name}"
          index+=1
        end
      end
