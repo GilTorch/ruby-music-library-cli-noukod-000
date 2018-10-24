@@ -94,8 +94,9 @@ class MusicLibraryController
       number_chosen = gets.strip.to_i
       break if !Song.all[number_chosen-1].nil?
     end
-    song_chosen=Song.all[number_chosen-1]
-    puts "Playing #{song_chosen.name} by #{song_chosen.artist.name}"
+    sorted_songs=Song.all.sort{|prev_song,next_song| prev_song.name <=> next_song.name}
+    song_chosen=sorted_songs[number_chosen-1]
+    puts "Playing #{song_chosen.artiname} by #{song_chosen.artist.name}"
   end
 
 end
