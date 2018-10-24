@@ -90,7 +90,7 @@ class MusicLibraryController
   def play_song
     loop do
       puts "Which song number would you like to play?"
-      number_chosen = gets.strip
+      number_chosen = gets.strip.to_i
       break if !Song.all[number_chosen-1].nil?
     end
   end
