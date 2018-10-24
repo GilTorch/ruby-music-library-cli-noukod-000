@@ -62,7 +62,7 @@ class MusicLibraryController
     artist_found=Artist.find_by_name(artist_name)
     index=0
     artist_found.songs.each do |song|
-      puts "#{index+1}. song.name"
+      puts "#{index+1}. #{song.name}"
       index+=1
     end
   end
