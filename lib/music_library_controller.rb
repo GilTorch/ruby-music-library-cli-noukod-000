@@ -31,8 +31,10 @@ class MusicLibraryController
 
   def list_songs
     index = 0
-    sorted_songs=Song.all.sort{|prev_song,next_song| prev_song<=>next_song}
-    binding.pry
+    sorted_songs=Song.all.sort{|prev_song,next_song| prev_song.name<=>next_song.name}
+    sorted_songs.each do |song|
+      puts "#{index+1}. #{song}"
+    end
   end
 
 end
