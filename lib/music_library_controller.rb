@@ -34,6 +34,7 @@ class MusicLibraryController
     sorted_songs=Song.all.sort{|prev_song,next_song| prev_song.name<=>next_song.name}
     sorted_songs.each do |song|
       puts "#{index+1}. #{song.name}"
+      index+=1
     end
   end
 
