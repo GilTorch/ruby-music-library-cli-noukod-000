@@ -92,7 +92,7 @@ class MusicLibraryController
     loop do
       puts "Which song number would you like to play?"
       number_chosen = gets.strip.to_i
-        break if !Song.all[number_chosen-1].nil?
+        break if (1...Song.all.length-1).include?(number_chosen-1)
     end
     if(!Song.all[number_chosen-1].nil?)
       sorted_songs=Song.all.sort{|prev_song,next_song| prev_song.name <=> next_song.name}
