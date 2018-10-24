@@ -78,16 +78,16 @@ class Song
   end
 
   def self.create_from_filename(filename)
-    # song_infos=file_name.split(" - ")
-    #   #binding.pry
-    # song_name=song_infos[1]
-    # artist_name=song_infos[0]
-    # genre_name=song_infos[2].gsub(/.mp3/,'')
-    #
-    # artist = Artist.find_or_create_by_name(artist_name)
-    # genre = Genre.find_or_create_by_name(genre_name)
-    # song = Song.new(song_name,artist,genre)
-    song = Song.new_from_filename(filename)
+    song_infos=file_name.split(" - ")
+      #binding.pry
+    song_name=song_infos[1]
+    artist_name=song_infos[0]
+    genre_name=song_infos[2].gsub(/.mp3/,'')
+    
+    artist = Artist.find_or_create_by_name(artist_name)
+    genre = Genre.find_or_create_by_name(genre_name)
+    song = Song.new(song_name,artist,genre)
+    # song = Song.new_from_filename(filename)
     self.save(song)
   end
 
