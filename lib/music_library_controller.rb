@@ -48,6 +48,7 @@ class MusicLibraryController
   end
 
   def list_genres
+    index=0
     sorted_genres=Genre.all.sort{|prev_genre,next_genre| prev_genre.name<=>next_genre.name}
     sorted_genres.each do |genre|
       puts "#{index+1}. #{genre.name}"
