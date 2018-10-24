@@ -96,7 +96,7 @@ class MusicLibraryController
     end
     sorted_songs=Song.all.sort{|prev_song,next_song| prev_song.name <=> next_song.name}
     song_chosen=sorted_songs[number_chosen-1]
-    puts "Playing #{song_chosen.artiname} by #{song_chosen.artist.name}"
+    puts "Playing #{song_chosen.artist.name} by #{song_chosen.artist.name}"
   end
 
 end
