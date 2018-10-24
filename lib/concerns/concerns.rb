@@ -10,6 +10,8 @@ module Concerns
       found = self.all.select{|class_instance| class_instance.name == name}
       if found.nil?
         self.create(name)
+      else 
+        found
       end
     end
 
