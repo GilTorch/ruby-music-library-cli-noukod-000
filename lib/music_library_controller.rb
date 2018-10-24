@@ -26,4 +26,9 @@ class MusicLibraryController
     # gets.strip
     # gets.strip
   end
+
+  def list_songs 
+    
+  end
+  
 end
