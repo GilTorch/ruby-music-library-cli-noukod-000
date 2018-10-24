@@ -18,7 +18,7 @@ class MusicImporter
       @files=Dir[path]
       @files.each do |file|
         song_name=file.split(/\/.+\//)[1]
-        Song.new_by_filename(song_name)
+        Song.create_from_filename(path)
       end
     end
 end
