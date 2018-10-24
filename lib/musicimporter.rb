@@ -1,3 +1,5 @@
+require 'pry'
+
 class MusicImporter
   attr_accessor :path
 
@@ -18,7 +20,8 @@ class MusicImporter
       @files=Dir[path]
       @files.each do |file|
         song_name=file.split(/\/.+\//)[1]
-        Song.create_from_filename(file)
+        binding.pry
+        Song.create_from_filename()
       end
     end
 end
