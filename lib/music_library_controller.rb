@@ -93,6 +93,8 @@ class MusicLibraryController
       number_chosen = gets.strip.to_i
       break if !Song.all[number_chosen-1].nil?
     end
+    song_chosen=Song.all[number_chosen-1]
+    
   end
 
 end
