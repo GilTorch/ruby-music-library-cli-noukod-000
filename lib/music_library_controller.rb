@@ -31,7 +31,7 @@ class MusicLibraryController
 
   def list_songs
     index = 0
-    sorted_songs=Song.all.sort
+    sorted_songs=Song.all.sort{|prev_song,next_song| prev_song<=>next_song}
     binding.pry
   end
 
